@@ -23,5 +23,3 @@ class Stack {
     return this.end - this.start;
   }
 }
-
-const testStack = new Stack();
