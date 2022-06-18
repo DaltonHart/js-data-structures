@@ -35,6 +35,20 @@ class Array {
     }
     return newArray;
   }
+
+  delete(index) {
+    delete this.storage[index];
+    this._shiftItems(index);
+  }
+
+  _shiftItems(index) {
+    for (let key = index; key < this.length; key++) {
+      console.log(key);
+      this.storage[key] = this.storage[key + 1];
+    }
+    delete this.storage[this.length - 1];
+    this.length--;
+  }
 }
 
 const testArray = new Array();
