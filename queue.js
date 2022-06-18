@@ -23,5 +23,3 @@ class Queue {
     return this.end - this.start;
   }
 }
-
-const testQueue = new Queue();
